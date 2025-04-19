@@ -1,4 +1,4 @@
-def rotate_elements
+def rotate_elements(n, arr)
 end
 
 # Example usage (uncomment to run directly)
