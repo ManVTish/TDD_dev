@@ -1,16 +1,16 @@
+def min_element(arr)
+  min = arr[0]
+  (1...arr.length).each do |i|
+    min = arr[i] if arr[i] < min
+  end
+  min
+end
+
 def rotate_elements(n, arr)
   return 'Cannot operate on empty array' if arr.empty?
 
-  min_element = lambda do |a|
-    min = a[0]
-    (1...a.length).each do |i|
-      min = a[i] if a[i] < min
-    end
-    min
-  end
-
   arr_value = arr.dup
-  while arr_value[0] != min_element.call(arr_value)
+  while arr_value[0] != min_element(arr_value)
     arr_value = arr_value[1..-1] + [arr_value[0]]
   end
 
