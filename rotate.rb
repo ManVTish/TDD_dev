@@ -1,4 +1,5 @@
 def rotate_elements(n, arr)
+  return 'Cannot operate on empty array' if arr.empty?
 end
 
 # Example usage (uncomment to run directly)
